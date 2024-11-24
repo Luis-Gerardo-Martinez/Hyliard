@@ -1,0 +1,286 @@
+:root {
+    --primary-color: hsl(214, 84%, 56%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-color: hsl(0, 0%, 90%);
+    --bg-card-color: hsl(0, 0%, 98%);
+    --border-radius: 0.4em;
+    --transition: color 0.1s, background-color 0.2s ease-in-out;
+
+}
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --transition: all 0.3s ease-in-out; /* Cambia el tiempo y el tipo según lo necesites */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Estilo global del body */
+
+body.dark {
+    --text-color: hsl(0, 0%, 83%);
+    --bg-color: hsl(0, 0%, 15%);
+    --bg-card-color: hsl(0, 0%, 20%);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color:var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+    padding: 0;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+    justify-content: space-between; /* Esto coloca el footer al final */
+}
+
+/* Logo */
+.logo-img {
+    height: 40px;
+}
+
+.logo-link {
+    text-decoration: none;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color-dark);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
+    background-color: var(--primary-color-light);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color var(--transition); /* Usa la variable */
+}
+
+.switches {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.toggle-theme__icon {
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme__text {
+    font-size: 0.8rem;
+}
+.no-margin{
+    margin: 0;
+}
+
+/* aqui termina el Header */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el pie de página */
+footer {
+    background: var(--bg-color);
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrado de texto */
+    padding: 20px 0; /* Espaciado superior e inferior */
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    transition: background-color var(--transition); /* Usa la variable */
+}
+.container-footer {
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+    background:var(--bg-color);
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+}
+
+/* esto es para el logo  */
+
+.logo-footer img{
+    max-width: 100%;
+    height: 90px; 
+}
+
+.logo-footer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    padding: 20px; /* Añade algo de espacio alrededor del logo */
+    background-color: var(--bg-color); /* Color de fondo opcional */
+}
+
+footer .logo-footer img {
+    max-width: 150px; /* Tamaño máximo para el logo */
+    margin-bottom: 10px; /* Espaciado debajo del logo */
+}
+
+/* Estilo para los enlaces de redes sociales */
+.redes-footer {
+    margin: 15px 0; /* Espaciado superior e inferior */
+    display: flex;
+    justify-content: center;    
+}
+
+.redes-footer a {
+    color: white; /* Color blanco para los iconos */
+    margin: 0 10px; /* Espaciado entre los iconos */
+    font-size: 24px; /* Tamaño de los iconos */
+    text-decoration: none; /* Quitar subrayado */
+}
+/* Este separa las redes y las hace grande   */
+.redes-footer .icon-redes {
+    font-size: 30px;
+    margin: 20px;
+    background: #efefef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #a2a2a2;
+    transition: background-color var(--transition); /* Usa la variable */
+}
+/* Este es para cuando pasas por el icono de cada uno   */
+footer .redes-footer .fa-linkedin-in:hover {
+    background: #0e76a8;
+    color: #fff;
+}
+footer .redes-footer .fa-github:hover {
+    background: #000;
+    color: #fff;
+}
+  
+footer .redes-footer .fa-twitch:hover {
+    background: #6441a5;
+    color: #fff;
+}
+
+
+/* Estilo para el separador horizontal */
+footer hr {
+    border: 0;
+    border-top: 1px solid #34495e; /* Línea gris */
+    margin: 20px auto; /* Espaciado y centrado */
+    width: 80%; /* Ancho de la línea */
+}
+
+/* Estilo para el texto debajo del separador */
+footer p {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    margin: 5px 0;
+}
+
+footer h4 {
+    font-size: 16px; /* Tamaño de fuente para el nombre */
+    margin: 0;
+    text-align: center;
+    color: #a2a2a2;
+    margin-top: 20px;
+}
+footer p {
+    font-size: 14px; /* Tamaño de fuente para el nombre */
+    margin: 0;
+    text-align: center;
+    color: #a2a2a2;
+    margin-top: 20px;
+}
+
+/* Estilo para pantallas más pequeñas (responsivo) */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar los enlaces en pantallas pequeñas */
+    }
+
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .navbar.active {
+        display: block;
+        margin-top: 10px;
+    }
+}
